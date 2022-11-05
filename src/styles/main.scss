@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Nunito+Sans:wght@400;700&display=swap');
+@import "~normalize.css";
+@import "vars";
+@import "mixin";
+@import "animation";
+@import "settings";
+
+
+// Ctrl + Alt + X классы SCSS
+// Ctrl + Alt + C классы CSS
+
+//прописываем background-image: url("./images/picture.jpg");
+
+
+/* Blocks */
+@import "components/preloader&logo";
+@import "components/general";
+@import "components/header";
+@import "components/footer";
+
+
+@import "components/hero";
+@import "components/algorithm";
+@import "components/requisition";
+@import "components/benefit";
+@import "components/example";
+@import "components/order";
+@import "components/partner";
+@import "components/review";
+@import "components/achivment";
+
+
+
+
+
