@@ -1,6 +1,7 @@
 .hero {
     background: $white;
-    height: 43rem;
+    height: 55rem;
+    position: relative;
     &-wave {
         position: absolute;
         z-index: 2;
@@ -11,5 +12,40 @@
         justify-content: center;
         width: 4700px;
     }
+    &-content {
+        display: flex;
+        height: 100%;
+        padding-top: 5rem;
+    }
+    &-title {
+        width: 50%;
+        padding: 2rem;
+        padding-right: 6rem;
+    }
+    &-main-title {
+        @include adaptiv-font(3.4, 2);
+        line-height: 4.5rem;
+        margin-bottom: 4rem;
+    }
+    &-sub-title {
+        @include adaptiv-font(1.2, 1);
+        line-height: 2rem;
+        letter-spacing: 1.2px;
+    }
+    &-form {
+        width: 50%;
+        padding: 2rem;
+        padding-left: 6rem;
+        position: relative;
+        &-wrap {
+            height: 440px;
+            width: 360px;
+            background: $white;
+            box-shadow: $main-shadow;
+            border-radius: 1.4rem;
+            display: block;
+            position: relative;
+            z-index: 2;
+        }
+    }
 }
-

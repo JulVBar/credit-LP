@@ -1,10 +1,12 @@
 
 import './styles/main.scss';
 import preloader from './js/preloader';
+import algorithmAnimation from './js/algorithmAnimation';
 
 
 window.addEventListener('DOMContentLoaded', function() {
     // preloader();
+    algorithmAnimation();
 });
 
 // load all images
@@ -12,6 +14,7 @@ window.addEventListener('DOMContentLoaded', function() {
 const images = importAll(require.context('./images', false, /\.(png|jpe?g|svg|gif)$/));
 const slider = importAll(require.context('./images/slider', false, /\.(png|jpe?g|svg|gif)$/));
 const bg = importAll(require.context('./images/bg', false, /\.(png|jpe?g|svg|gif)$/));
+const figureBg = importAll(require.context('./images/figure-bg', false, /\.(png|jpe?g|svg|gif)$/));
 
 function importAll(r) {
     let images = {};

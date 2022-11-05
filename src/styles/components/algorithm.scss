@@ -1,6 +1,167 @@
 .algorithm {
     background: $primary;
+    height: 800px;
     &-inner {
         width: 100%;
+        position: relative;
     }
+    &-circle {
+        @include flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+            width: 80%;
+            height: 80%;
+        }
+    }
+    &-icon {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        background: $white;
+        box-shadow: $main-shadow;
+        @include flex;
+        margin-right: 2rem;
+        img {
+            width: 80%;
+            height: 80%;
+        }
+        &-application {
+            // animation: circle-pump 0.8s linear forwards;
+            transform: scale(0);
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+        }
+        &-choose {
+            // animation: circle-pump 0.8s linear forwards;
+            transform: scale(0);
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-delay: 1.4s;
+        }
+        &-money {
+            // animation: circle-pump 0.8s linear forwards;
+            transform: scale(0);
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+            animation-delay: 3s;
+        }
+    }
+    &-text {
+        color: $white;
+        font-size: 1.2rem;
+        letter-spacing: 1.3px;
+        width: 12rem;
+    }
+    &-application {
+        top: -6rem;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 3rem;
+            right: -2rem;
+            width: 40px;
+            height: 40px;
+            border: 7px solid $white;
+            border-radius: 50%;
+        }
+    }
+    &-choose {
+        top: 8rem;
+        left: 30rem;
+    }
+    &-money {
+        top: 20rem;
+        left: 58rem;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 3rem;
+            left: -3rem;
+            width: 40px;
+            height: 40px;
+            border: 7px solid $white;
+            border-radius: 50%;
+        }
+    }
+}
+
+@keyframes circle-pump {
+    0% {
+        transform: scale(0);
+    }
+    70% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+// animation-duration: 0.8s;
+// animation-fill-mode: forwards;
+// animation-timing-function: linear;
+// animation-delay: 3.4s;
+
+/* Lines Animation */
+.line-up {
+    position: absolute;
+    top: -2rem;
+    left: 25rem;
+}
+.line-down {
+    position: absolute;
+    top: 17rem;
+    left: 34rem;
+}
+.line-path {
+    fill: none;
+    stroke: $white;
+    stroke-dasharray: 30 10;
+    stroke-width: 10;
+}
+
+.line-up-mask {
+    fill: none;
+    stroke: $white;
+    stroke-width: 10;
+    stroke-dasharray: 230;
+    stroke-dashoffset: 230;
+    // animation: line-dash  0.7s linear forwards;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 0.6s;
+}
+.line-down-mask {
+    fill: none;
+    stroke: white;
+    stroke-width: 10;
+    stroke-dasharray: 400;
+    stroke-dashoffset: 400;
+    // animation: line-dash 1.2s linear forwards; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+}
+@keyframes line-dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Classes for scroll */
+
+.animation-line-dash-start {
+    animation-name: line-dash;
+}
+
+.animation-circle-pump-start {
+    animation-name: circle-pump;
 }
