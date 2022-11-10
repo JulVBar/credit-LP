@@ -7,10 +7,12 @@
         z-index: 2;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 0;
+        //start-animation
+        bottom: 100%;
         display: flex;
         justify-content: center;
         width: 4700px;
+        transition: all 1s linear;
     }
     &-content {
         display: flex;
@@ -21,6 +23,10 @@
         width: 50%;
         padding: 2rem;
         padding-right: 6rem;
+        // transform: translateY(20%);
+        // opacity: 0;
+        // visibility: hidden;
+        // transition: all 1s ease-in-out;
     }
     &-main-title {
         @include adaptiv-font(3.4, 2);
@@ -34,18 +40,35 @@
     }
     &-form {
         width: 50%;
-        padding: 2rem;
-        padding-left: 6rem;
-        position: relative;
-        &-wrap {
-            height: 440px;
-            width: 360px;
+        padding: 0 6rem;
+
+        form {
+            padding: 1rem 2rem;
             background: $white;
             box-shadow: $main-shadow;
             border-radius: 1.4rem;
-            display: block;
-            position: relative;
-            z-index: 2;
+            width: 24rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    &.start-animation {
+        .hero-wave {
+            bottom: 0;
+            animation-delay: 6s;
+        }
+        .hero-title {
+            @include animation-slide-up(1s, 1s);
+            // transform: translateY(0);
+            // opacity: 1;
+            // visibility: visible;
+        }
+        .hero-sub-title {
+            @include animation-slide-up(1s, 1.5s);
+        }
+        .hero-form {
+            @include animation-slide-up(1s, 1s);
         }
     }
 }

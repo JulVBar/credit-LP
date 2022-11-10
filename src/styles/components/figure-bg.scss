@@ -21,7 +21,7 @@
     list-style: none;
     width: 45px;
     height: 45px;
-    animation: figure-moving 25s linear infinite;
+    animation: figure-moving 25s linear infinite reverse;
     bottom: 50px;
 }
 
@@ -33,11 +33,11 @@
 }
 
 .figure li:nth-child(2){
-    left: 10%;
+    left: 45%;
     width: 70px;
     height: 70px;
     animation-delay: 2s;
-    animation-duration: 12s;
+    animation-duration: 24s;
 }
 
 .figure li:nth-child(3){
@@ -70,7 +70,7 @@
 }
 
 .figure li:nth-child(7){
-    left: 45%;
+    left: 30%;
     width: 150px;
     height: 150px;
     animation-delay: 7s;
@@ -78,18 +78,18 @@
 
 .figure li:nth-child(8){
     left: 50%;
-    width: 35px;
-    height: 35px;
+    width: 50px;
+    height: 50px;
     animation-delay: 15s;
     animation-duration: 45s;
 }
 
 .figure li:nth-child(9){
-    left: 20%;
+    left: 10%;
     width: 150px;
     height: 150px;
-    animation-delay: 2s;
-    animation-duration: 35s;
+    animation-delay: 1s;
+    animation-duration: 20s;
 }
 
 .figure li:nth-child(10){
@@ -111,7 +111,7 @@
     width: 80px;
     height: 80px;
     animation-delay: 0s;
-    animation-duration: 8s;
+    animation-duration: 12s;
 }
 
 @keyframes figure-moving {

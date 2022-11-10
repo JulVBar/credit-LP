@@ -9,6 +9,8 @@ function preloader() {
             if (preloader && !preloader.classList.contains('done')) {
                 preloader.classList.add('done');
                 document.body.style.overflow = '';
+                document.querySelector('.hero').classList.add('start-animation');
+                document.querySelector('.algorithm').classList.add('start-animation');
             }
 
         }, 2000); //$preloader-delay: 1000ms in SCSS

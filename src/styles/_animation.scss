@@ -57,6 +57,27 @@ $general-delay: 2.5s;
     animation-delay: calc($preloader-delay + $delay);
 }
 
+@keyframes slide-up {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@mixin animation-slide-up ($duration, $delay) {
+    transform: translateY(20%);
+    opacity: 0;
+    visibility: hidden;
+    animation: slide-up $duration linear forwards;
+    animation-delay: calc($preloader-delay + $delay);
+}
+
 @keyframes roll-in-left {
     from {
         transform: rotate(0deg);

@@ -22,6 +22,9 @@
     <meta name="description" content=""> <!-- Need to fill -->
     <meta name="keywords" content=""> <!-- Need to fill -->
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- Swiper CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -30,7 +33,7 @@
 </head>
 
 <body>
-    <!-- <div class="preloader">
+    <div class="preloader">
         <div class="preloader-bg"></div>
         <div class="logo">
             <div class="logo-image">
@@ -49,10 +52,25 @@
             </div>
             <div class="logo-text">Bankiroff</div>
         </div>
-    </div> -->
+    </div>
 
     <div class="page">
-        <header class="header"></header>
+        <header class="header">
+            <div class="header-container">
+                <nav>
+                    <ul class="list-reset">
+                        <li><a href="#">Для кредиторов</a></li>
+                        <li><a href="#">Для заемщиков</a></li>
+                        <li><a href="#">Поиск по карте</a></li>
+                        <li><a href="#">Статьи</a></li>
+                    </ul>
+                </nav>
+                <button class="button-secondary">
+                    <span>Оформить заяку</span>
+                </button>
+            </div>
+            
+        </header>
 
         <main class="main">
             <section class="hero section">
@@ -61,40 +79,60 @@
                 </div>
                 <div class="figure-bg">
                     <ul class="figure">
-                        <li><img class="image-cover" src="images/figure-bg/dollar-blue.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/bag.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/dollar-grey.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/dollar-blue.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/coins.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/dollar-blue.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/cash.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/dollar-blue.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/dollar-grey.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/dollar-blue.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/dollar-grey.svg" alt=""></li>
-                        <li><img class="image-cover" src="images/figure-bg/dollar-grey.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v1.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v2.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v3.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v1.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v2.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v3.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v1.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v2.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v3.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v1.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v2.svg" alt=""></li>
+                        <li><img class="image-cover" src="images/figure-bg/dollar-v3.svg" alt=""></li>
                     </ul>
                 </div> 
                 <div class="container">
                     <dic class="hero-inner section__inner">
                         <div class="hero-content">
                             <div class="hero-title">
-                                <h1 class="hero-main-title">Возьмите займ прямо сейчас!
-                                </h1>
+                                <h1 class="hero-main-title">Возьмите займ прямо сейчас!</h1>
                                 <h2 class="hero-sub-title">
                                     Просто! Быстро! Без залога, <br> с залогом. Без поручителей, с любой <br> кредитной историей
                                 </h2>
                             </div>
                             <div class="hero-form">
-                                <form class="hero-form-wrap">
-                                    
+                                <form>
+                                    <div class="form-control">
+                                        <input class="input" type="text" id="summ" value="100000" required>
+                                        <label class="input-label" for="summ">Сумма</label>
+                                    </div>
+                                    <div class="form-control">
+                                        <select id="select" class="input select">
+                                            <option value="value1" selected>1 месяц</option>
+                                            <option value="value2" >3 месяца</option>
+                                            <option value="value3">6 месяцев</option>
+                                        </select>
+                                        <label id="select" class="input-label">Срок</label>
+                                    </div>
+                                    <div class="form-control">
+                                        <input class="input" type="text" id="name" value="Константин" required>
+                                        <label class="input-label" for="name">Имя</label>
+                                    </div>
+                                    <div class="form-control">
+                                        <input class="input" type="email" id="email" value="help@bank.ru" required>
+                                        <label class="input-label" for="email">E-mail</label>
+                                    </div>
+                                    <button class="button-primary">
+                                        <span>Оформить заявку</span>
+                                    </button>
                                 </form>
                             </div>
                         </div>
                     </dic>
                 </div>
             </section>
-            
 
             <section class="algorithm section">
                 <div class="top-wave">
@@ -145,7 +183,7 @@
                         </div>
                     </dic>
                 </div>
-            </section> -->
+            </section>
 
             <section class="requisition section">
                 <div class="top-wave">
@@ -154,10 +192,77 @@
                 <div class="mid-wave"></div>
                 <div class="container">
                     <dic class="requisition-inner section__inner">
-                        <h1>Third</h1>
+                        <div class="requisition-content" data-aos="fade-right" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+                            <h2 class="requisition-title">Последние заявки</h2>
+                            <p class="requisition-text">Займами называют весьма широкий спектр экономический отношений, между частными лицами, организациями и государствами. Суть займа состоит в передаче одним лицом другому каких-либо материальных ценностей, в денежной или товарной форме. Эти данные взаймы активы подлежат возврату на оговоренных между займодавцем и заемщиком условиях. Ссуда, кредит и займ представляют собой виды имущественных обязательных отношений.</p>
+                            <button class="button-primary test">
+                                <span>Хочу также!</span>
+                            </button>
+                        </div>
+                        <div class="requisition-case" data-aos="fade-left" data-aos-duration="1500" data-aos-anchor-placement="top-center">
+                            <ul class="case-list list-reset">
+                                <li class="case-item">
+                                    <div class="case-photo">
+                                        <img class="image-cover" src="images/testimonials/testimonial-photo-1.jpg" alt="coin">
+                                    </div>
+                                    <div class="case-success">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"">
+                                            <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M21.707,12.707l-7.56,7.56 c-0.188,0.188-0.442,0.293-0.707,0.293s-0.52-0.105-0.707-0.293l-3.453-3.453c-0.391-0.391-0.391-1.023,0-1.414s1.023-0.391,1.414,0 l2.746,2.746l6.853-6.853c0.391-0.391,1.023-0.391,1.414,0S22.098,12.316,21.707,12.707z" fill="#4178EF" />
+                                        </svg>
+                                        Одобрено
+                                    </div>
+                                    <div class="case-summ">30 000</div>
+                                    <div class="case-name">Александр</div>
+                                    <div class="case-text">Заем может быть бесплатным, без процентов и вознаграждений, с возвратом лишь переданного актива</div>
+                                </li>
+                                <li class="case-item">
+                                    <div class="case-photo">
+                                        <img class="image-cover" src="images/testimonials/testimonial-photo-2.jpg" alt="coin">
+                                    </div>
+                                    <div class="case-success">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"">
+                                            <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M21.707,12.707l-7.56,7.56 c-0.188,0.188-0.442,0.293-0.707,0.293s-0.52-0.105-0.707-0.293l-3.453-3.453c-0.391-0.391-0.391-1.023,0-1.414s1.023-0.391,1.414,0 l2.746,2.746l6.853-6.853c0.391-0.391,1.023-0.391,1.414,0S22.098,12.316,21.707,12.707z" fill="#4178EF" />
+                                        </svg>
+                                        Одобрено
+                                    </div>
+                                    <div class="case-summ">60 000</div>
+                                    <div class="case-name">Никита</div>
+                                    <div class="case-text">Условия заимствований бывают разными и регулируются более всего соглашениями между сторонами сделки</div>
+                                </li>
+                                <li class="case-item">
+                                    <div class="case-photo">
+                                        <img class="image-cover" src="images/testimonials/testimonial-photo-3.jpg" alt="coin">
+                                    </div>
+                                    <div class="case-success">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"">
+                                            <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M21.707,12.707l-7.56,7.56 c-0.188,0.188-0.442,0.293-0.707,0.293s-0.52-0.105-0.707-0.293l-3.453-3.453c-0.391-0.391-0.391-1.023,0-1.414s1.023-0.391,1.414,0 l2.746,2.746l6.853-6.853c0.391-0.391,1.023-0.391,1.414,0S22.098,12.316,21.707,12.707z" fill="#4178EF" />
+                                        </svg>
+                                        Одобрено
+                                    </div>
+                                    <div class="case-summ">100 000</div>
+                                    <div class="case-name">Дмитрий</div>
+                                    <div class="case-text">Кредиты выдают российские банки и некоторые уполномоченные для этого организации</div>
+                                </li>
+                                <li class="case-item">
+                                    <div class="case-photo">
+                                        <img class="image-cover" src="images/testimonials/testimonial-photo-4.jpg" alt="coin">
+                                    </div>
+                                    <div class="case-success">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"">
+                                            <path d="M15,3C8.373,3,3,8.373,3,15c0,6.627,5.373,12,12,12s12-5.373,12-12C27,8.373,21.627,3,15,3z M21.707,12.707l-7.56,7.56 c-0.188,0.188-0.442,0.293-0.707,0.293s-0.52-0.105-0.707-0.293l-3.453-3.453c-0.391-0.391-0.391-1.023,0-1.414s1.023-0.391,1.414,0 l2.746,2.746l6.853-6.853c0.391-0.391,1.023-0.391,1.414,0S22.098,12.316,21.707,12.707z" fill="#4178EF" />
+                                        </svg>
+                                        Одобрено
+                                    </div>
+                                    <div class="case-summ">25 000</div>
+                                    <div class="case-name">Максим</div>
+                                    <div class="case-text">Одолжить корзину картошки в 20 кг с условием вернуть то же количество продукта того же качества – это заём</div>
+                                </li>
+                            </ul>
+                        </div>
                     </dic>
                 </div>
             </section>
+
             <section class="benefit section">
                 <div class="top-wave">
                     <img src="images/bg/section3.svg" alt="">
@@ -165,21 +270,101 @@
                 <div class="mid-wave"></div>
                 <div class="container">
                     <dic class="benefit-inner section__inner">
-                        <h1>Benefit</h1>
+                        <ul class="benefit-list list-reset">
+                            <li class="benefit-item" data-aos="flip-left" data-aos-anchor-placement="top-center">
+                                <div class="benefit-blur-bg"></div>
+                                <div class="benefit-content">
+                                    <div class="benefit-icon">
+                                        <img src="images/benefit/coins.gif" alt="">
+                                    </div>
+                                    <h3>Легко и быстро</h3>
+                                    <p>Оставьте свой номер телефона и мы сами заполним заявку на займ</p>
+                                </div>
+                            </li>
+                            <li class="benefit-item" data-aos="flip-left" data-aos-anchor-placement="top-center" data-aos-delay="300">
+                                <div class="benefit-blur-bg"></div>
+                                <div class="benefit-content">
+                                    <div class="benefit-icon">
+                                        <img src="images/benefit/sofa.gif" alt="">
+                                    </div>
+                                    <h3>Не выходя из дома</h3>
+                                    <p>Вы сможете выбрать подходящего кредитора по разным критериям</p>
+                                </div>
+                            </li>
+                            <li class="benefit-item" data-aos="flip-left" data-aos-anchor-placement="top-center" data-aos-delay="600">
+                                <div class="benefit-blur-bg"></div>
+                                <div class="benefit-content">
+                                    <div class="benefit-icon">
+                                        <img src="images/benefit/clock.gif" alt="">
+                                    </div>
+                                    <h3>Ответ за 30 минут</h3>
+                                    <p>Вы гарантированно получаете ответ</p>
+                                </div>
+                            </li>
+                            <li class="benefit-item" data-aos="flip-left" data-aos-anchor-placement="top-center" data-aos-delay="900">
+                                <div class="benefit-blur-bg"></div>
+                                <div class="benefit-content">
+                                    <div class="benefit-icon">
+                                        <img src="images/benefit/free.gif" alt="">
+                                    </div>
+                                    <h3>Бесплатная услуга</h3>
+                                    <p>Для заемщика услуга бесплатна</p>
+                                </div>
+                            </li>
+                        </ul>
                     </dic>
                 </div>
             </section>
+
             <section class="example section">
                 <div class="top-wave">
                     <img src="images/bg/section4.svg" alt="">
                 </div>
                 <div class="mid-wave"></div>
-                <div class="container">
-                    <dic class="example-inner section__inner">
-                        <h1>Benefit</h1>
-                    </dic>
+
+                <div class="example-inner section__inner">
+                    <div class="example-swiper-content">
+                        <div class="swiper example-swiper">
+                            <div class="swiper-wrapper example-swiper-wrapper">
+                                <div class="swiper-slide example-swiper-slide">Slide 1</div>
+                                <div class="swiper-slide example-swiper-slide">Slide 2</div>
+                                <div class="swiper-slide example-swiper-slide">Slide 3</div>
+                                <div class="swiper-slide example-swiper-slide">Slide 4</div>
+                                <div class="swiper-slide example-swiper-slide">Slide 5</div>
+                                <div class="swiper-slide example-swiper-slide">Slide 6</div>
+                            </div>
+                        </div>
+                        <div class="example-swiper-buttons">
+                            <div class="example-swiper-button-prev">
+                                <svg><use xlink:href="images/icon/sprite.svg#simple-arrow"></use></svg>
+                            </div>
+                            <div class="example-swiper-button-next">
+                                <svg><use xlink:href="images/icon/sprite.svg#simple-arrow"></use></svg>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="example-title">
+                        <h2>Примеры выданных займов</h2>
+                    </div>
                 </div>
             </section>
+
+            <section class="order section">
+                <div class="top-wave">
+                    <img src="images/bg/section5.svg" alt="">
+                </div>
+                <div class="mid-wave"></div>
+                <div class="container">
+                    <div class="order-inner section__inner">
+                        <form action="">
+                            <div class="o"></div>
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+
             <section class="partner section">
                 <div class="top-wave">
                     <img src="images/bg/section6.svg" alt="">
@@ -187,10 +372,11 @@
                 <div class="mid-wave"></div>
                 <div class="container">
                     <dic class="partner-inner section__inner">
-                        <h1>Benefit</h1>
+                        
                     </dic>
                 </div>
             </section>
+
             <section class="review section">
                 <div class="top-wave">
                     <img src="images/bg/section7.svg" alt="">
@@ -202,6 +388,7 @@
                     </dic>
                 </div>
             </section>
+
             <section class="achivment section">
                 <div class="top-wave">
                     <img src="images/bg/section8.svg" alt="">
@@ -218,5 +405,9 @@
 
         <footer class="footer"></footer>
     </div>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+</script>
 </body>
 </html>

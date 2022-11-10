@@ -2,5 +2,74 @@
     background: $white;
     &-inner {
         width: 100%;
+        display: flex;
+        justify-content: left;
+        left: -10rem;
+    }
+    &-swiper-content {
+        position: relative;
+    }
+    &-swiper {
+        padding-right: 1rem;
+        &-wrapper {
+            width: 1200px;
+            padding: 1.5rem 0;
+        }
+        &-slide {
+            width: 23rem;
+            height: 18rem;
+            background: $white;
+            box-shadow: $main-shadow;
+            border-radius: 1.2rem;
+        }
+        &-buttons {
+            position: absolute;
+            top: 22rem;
+            right: 9rem;
+            display: flex;
+            box-shadow: $main-shadow;
+            border-radius: 1.1rem;
+        }
+        &-button-next,
+        &-button-prev {
+            position: relative;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: $white;
+            cursor: pointer;
+            svg {
+                fill: $primary;
+                width: 1rem;
+                height: 1rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+            &.swiper-button-disabled svg {
+                fill: $grey;
+            }
+        }
+        &-button-next {
+            border-radius: 0 1.1rem 1.1rem 0;
+            svg {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+        &-button-prev {
+            border-radius: 1.1rem 0 0 1.1rem;
+            svg {
+                transform: translate(-50%, -50%) rotate(-90deg);
+            }
+        }
+    }
+    &-title {
+        @include adaptiv-font(2, 1.5);
+        line-height: 4rem;
+        width: 400px;
+        margin-left: 6rem;
+        margin-top: 1rem;
     }
 }
+
+
+
