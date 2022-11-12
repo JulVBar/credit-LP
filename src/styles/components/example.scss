@@ -10,17 +10,54 @@
         position: relative;
     }
     &-swiper {
-        padding-right: 1rem;
+        padding-right: 2rem;
+        padding-bottom: 2rem;
         &-wrapper {
             width: 1200px;
-            padding: 1.5rem 0;
+            padding: 1.2rem 0;
         }
         &-slide {
-            width: 23rem;
-            height: 18rem;
+            width: 20.8rem !important;
+            height: 16rem;
             background: $white;
             box-shadow: $main-shadow;
             border-radius: 1.2rem;
+            padding: 1.5rem;
+            &-header {
+                display: flex;
+                margin-bottom: 3rem;
+            }
+            &-img {
+                width: 10rem;
+                height: 8rem;
+                border-radius: 1.5rem;
+                overflow: hidden;
+                margin-right: 1rem;
+                img {
+                    object-fit: contain;
+                }
+            }
+            &-title {
+                h3 {
+                    font-size: 1.6rem;
+                    margin-bottom: 1rem;
+                    line-height: 2rem;
+                }
+                p {
+                    font-size: 1.1rem;
+                }
+            }
+            &-footer {
+                text-align: center;
+            }
+            &-price {
+                color: $primary;
+                font-size: 4rem;
+                margin-bottom: 2rem;
+            }
+            &-text {
+                font-size: 1.1rem;
+            }
         }
         &-buttons {
             position: absolute;
