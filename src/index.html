@@ -434,12 +434,23 @@
                                     </ul>
                                 </div>
                                 <div class="order-form-body">
-                                    <div class="order-form-tab">Name:
-                                        <p><input placeholder="First name..." oninput="this.className = ''"></p>
+                                    <div class="order-form-tab order-form-summ">
+                                        <div class="order-form-summ-control">
+                                            <label class="order-form-summ-label" for="orderSumm">Желаемая сумма</label>
+                                            <input class="input order-form-summ-input" type="text" id="orderSumm" value="29 000" required>
+                                        </div>
+                                        <div>Ползунок</div>
                                     </div>
                                     
-                                    <div class="order-form-tab">Contact Info:
-                                        <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
+                                    <div class="order-form-tab order-form-term">
+                                        <div class="order-form-term-control">
+                                            <label id="orderSelect" class="order-form-term-label"">Срок займа</label>
+                                            <select id="orderSelect" class="input select order-form-term-input">
+                                                <option value="value1" selected>1 месяц</option>
+                                                <option value="value2" >3 месяца</option>
+                                                <option value="value3">6 месяцев</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     
                                     <div class="order-form-tab">Birthday:
@@ -453,9 +464,11 @@
                                 <div class="order-form-footer">
                                     <button class="button-primary" type="button" id="prevBtn">
                                         <span id="prevBtnSpan">Назад</span>
+                                        <svg><use xlink:href="images/icon/sprite.svg#simple-arrow"></use></svg>
                                     </button>
                                     <button  class="button-primary" type="button" id="nextBtn">
                                         <span id="nextBtnSpan">Далее</span>
+                                        <svg id="nextBtnArrow"><use xlink:href="images/icon/sprite.svg#simple-arrow"></use></svg>
                                     </button>
                                 </div>
                             </form>

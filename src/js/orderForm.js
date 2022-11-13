@@ -15,6 +15,7 @@ function orderForm() {
         }
         if (n == (x.length - 1)) {
             document.getElementById("nextBtnSpan").innerHTML = "Оформить";
+            document.getElementById("nextBtnArrow").style.display = "none";
         } else {
             document.getElementById("nextBtnSpan").innerHTML = "Далее";
         }
@@ -64,7 +65,6 @@ function orderForm() {
     }
 
     function fixStepIndicator(n) {
-        console.log(n)
         // This function removes the "active" class of all steps...
         var i, x = document.getElementsByClassName("order-form-step");
         for (i = 0; i < x.length; i++) {
