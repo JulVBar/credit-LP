@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     
-    <title>Title</title>
+    <title>Bankiroff</title>
 </head>
 
 <body>
@@ -319,7 +319,7 @@
                 </div>
 
                 <div class="example-inner section__inner">
-                    <div class="example-swiper-content">
+                    <div class="example-swiper-content" data-aos="fade-right" data-aos-duration="1500" data-aos-anchor-placement="top-center">
                         <div class="swiper example-swiper">
                             <div class="swiper-wrapper example-swiper-wrapper">
                                 <div class="swiper-slide example-swiper-slide">
@@ -409,7 +409,7 @@
                         </div>
                         
                     </div>
-                    <div class="example-title">
+                    <div class="example-title" data-aos="fade-left" data-aos-duration="1500" data-aos-anchor-placement="top-center">
                         <h2>Примеры выданных займов</h2>
                     </div>
                 </div>
@@ -423,11 +423,41 @@
                     <div class="order-inner section__inner">
                         <h2 class="order-title">Оформите заявку прямо сейчас!</h2>
                         <div class="order-content">
-                            <div class="o">
-                                <img src="images/icon/flower.svg" alt="coin">
-                            </div>
-                            <form action="">
-                            
+                            <form class="order-form" id="orderForm" action="">
+                                <div class="order-form-header">
+                                    <ul class="list-reset">
+                                        <li class="order-form-step"><span>Сумма</span></li>
+                                        <li class="order-form-step"><span>Срок</span></li>
+                                        <li class="order-form-step"><span>Залог</span></li>
+                                        <li class="order-form-step"><span>Контакты</span></li>
+                                        
+                                    </ul>
+                                </div>
+                                <div class="order-form-body">
+                                    <div class="order-form-tab">Name:
+                                        <p><input placeholder="First name..." oninput="this.className = ''"></p>
+                                    </div>
+                                    
+                                    <div class="order-form-tab">Contact Info:
+                                        <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
+                                    </div>
+                                    
+                                    <div class="order-form-tab">Birthday:
+                                        <p><input placeholder="dd" oninput="this.className = ''"></p>
+                                    </div>
+                                    
+                                    <div class="order-form-tab">Login Info:
+                                        <p><input placeholder="Username..." oninput="this.className = ''"></p>
+                                    </div>
+                                </div>
+                                <div class="order-form-footer">
+                                    <button class="button-primary" type="button" id="prevBtn">
+                                        <span id="prevBtnSpan">Назад</span>
+                                    </button>
+                                    <button  class="button-primary" type="button" id="nextBtn">
+                                        <span id="nextBtnSpan">Далее</span>
+                                    </button>
+                                </div>
                             </form>
                         </div>
                         

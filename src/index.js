@@ -4,12 +4,14 @@ import preloader from './js/preloader';
 import algorithmAnimation from './js/algorithmAnimation';
 import caseSwitch from './js/caseSwitch';
 import swiper from './js/swiper';
+import orderForm from './js/orderForm';
 
 window.addEventListener('DOMContentLoaded', function() {
     preloader();
     algorithmAnimation();
     caseSwitch();
     swiper();
+    orderForm();
 });
 
 // load all images

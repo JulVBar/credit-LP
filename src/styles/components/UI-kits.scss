@@ -40,6 +40,14 @@
         opacity: 1;
         transform: scale(1, 1);
     }
+    &.disabled {
+        cursor: not-allowed;
+        border: 1px solid $grey;
+        background: $white;
+        span {
+            color: $grey;
+        }
+    }
 }
 .button-secondary {
     position: relative;
