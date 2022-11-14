@@ -19,7 +19,6 @@ function orderForm() {
         } else {
             document.getElementById("nextBtnSpan").innerHTML = "Далее";
         }
-        console.log(n)
         fixStepIndicator(n)
     }
 

@@ -5,6 +5,7 @@ import algorithmAnimation from './js/algorithmAnimation';
 import caseSwitch from './js/caseSwitch';
 import swiper from './js/swiper';
 import orderForm from './js/orderForm';
+import orderFormControls from './js/orderFormControls';
 
 window.addEventListener('DOMContentLoaded', function() {
     preloader();
@@ -12,6 +13,7 @@ window.addEventListener('DOMContentLoaded', function() {
     caseSwitch();
     swiper();
     orderForm();
+    orderFormControls();
 });
 
 // load all images
