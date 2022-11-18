@@ -1,15 +1,27 @@
 .requisition {
     background: $white;
+    @include breakpoint($tablet) {
+        height: 900px;
+    }
     &-inner {
         width: 100%;
         display: flex;
         position: relative;
         top: -15rem;
+        @include breakpoint($mini-desk) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &-content {
         width: 50%;
         padding-right: 8rem;
         padding-top: 3.5rem;
+        @include breakpoint($mini-desk) {
+            width: 100%;
+            padding: 0 2rem;
+            text-align: center;
+        }
     }
     &-title {
         @include adaptiv-font(3, 2);
@@ -22,6 +34,9 @@
 
     &-case {
         width: 50%;
+        @include breakpoint($mini-desk) {
+            width: 100%;
+        }
     }
 }
 
@@ -30,6 +45,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
+        @include breakpoint($mini-tablet) {
+            display: flex;
+            flex-direction: column;
+        }
     }
     &-item {
         position: relative;
@@ -40,7 +59,7 @@
         border-radius: 2rem;
         background: $white;
         box-shadow: $main-shadow;
-        
+
         &:nth-child(1).animate {animation: case-scale-1 6s linear infinite;}
         &:nth-child(2).animate {animation: case-scale-2 6s linear infinite;}
         &:nth-child(3).animate {animation: case-scale-3 6s linear infinite;}
@@ -55,6 +74,12 @@
         &.animate {
             .case-success {
                 @include animation-scale-out(2s);
+            }
+        }
+        @include breakpoint($mini-tablet) {
+            &:nth-child(3),
+            &:nth-child(4) {
+                display: none;
             }
         }
     }

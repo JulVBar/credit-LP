@@ -24,6 +24,7 @@ const bg = importAll(require.context('./images/bg', false, /\.(png|jpe?g|svg|gif
 const figureBg = importAll(require.context('./images/figure-bg', false, /\.(png|jpe?g|svg|gif)$/));
 const testimonials = importAll(require.context('./images/testimonials', false, /\.(png|jpe?g|svg|gif)$/));
 const benefit = importAll(require.context('./images/benefit', false, /\.(png|jpe?g|svg|gif)$/));
+const partners = importAll(require.context('./images/partners', false, /\.(png|jpe?g|svg|gif)$/));
 
 function importAll(r) {
     let images = {};

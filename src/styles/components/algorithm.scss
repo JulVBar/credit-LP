@@ -6,6 +6,9 @@
     opacity: 0;
     transform: translateY(200%);
     transition: all 1s linear;
+    @include breakpoint($mini-tablet) {
+        height: 500px;
+    }
     &.start-animation {
         opacity: 1;
         transform: translateY(0%);
@@ -13,12 +16,28 @@
     &-inner {
         width: 100%;
         position: relative;
+        z-index: 10;
+        @include breakpoint($mini-desk) {
+            transform: scale(0.7);
+            margin-left: -8rem;
+            margin-top: -6rem;
+        }
+        @include breakpoint($tablet) {
+            transform: scale(0.6);
+            margin-left: -10rem;
+            margin-top: -6rem;
+        }
+        @include breakpoint($mini-tablet) {
+            width: 100%;
+            margin: 0;
+        }
     }
     &-circle {
         @include flex;
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 10;
         img {
             width: 80%;
             height: 80%;
@@ -69,6 +88,11 @@
     }
     &-application {
         top: -6rem;
+        @include breakpoint($mini-tablet) {
+            top: -18rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
         &:after {
             content: '';
             position: absolute;
@@ -78,15 +102,28 @@
             height: 40px;
             border: 7px solid $white;
             border-radius: 50%;
+            @include breakpoint($mini-tablet) {
+                display: none;
+            }
         }
     }
     &-choose {
         top: 8rem;
         left: 30rem;
+        @include breakpoint($mini-tablet) {
+            top: -9rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
     &-money {
         top: 20rem;
         left: 58rem;
+        @include breakpoint($mini-tablet) {
+            top: 0rem;
+            left: 50%;
+            transform: translateX(-50%);
+        }
         &:after {
             content: '';
             position: absolute;
@@ -96,6 +133,9 @@
             height: 40px;
             border: 7px solid $white;
             border-radius: 50%;
+            @include breakpoint($mini-tablet) {
+                display: none;
+            }
         }
     }
 }
@@ -122,11 +162,19 @@
     position: absolute;
     top: -2rem;
     left: 25rem;
+    z-index: 10;
+    @include breakpoint($mini-tablet) {
+        display: none;
+    }
 }
 .line-down {
     position: absolute;
     top: 17rem;
     left: 34rem;
+    z-index: 10;
+    @include breakpoint($mini-tablet) {
+        display: none;
+    }
 }
 .line-path {
     fill: none;

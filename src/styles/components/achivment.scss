@@ -1,6 +1,85 @@
 .achivment {
     background: $white;
+    height: 500px;
+    @include breakpoint($mini-tablet) {
+        height: 700px;
+    }
     &-inner {
         width: 100%;
+        position: relative;
+        top: -12rem;
+        @include breakpoint($mini-desk) {
+            display: flex;
+            padding-top: 4rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        @include breakpoint($mini-tablet) {
+            padding-top: 6rem;
+        }
+    }
+    &-title {
+        font-size: 3.5rem;
+        line-height: 4rem;
+        color: $black;
+        width: 45%;
+        display: block;
+        text-align: right;
+        margin-bottom: 4rem;
+        margin-left: auto;
+        @include breakpoint($mini-desk) {
+            font-size: 2.5rem;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+            position: absolute;
+            top: 0;
+        }
+        @include breakpoint($mini-tablet) {
+            font-size: 2rem;
+        }
+    }
+    &-circle {
+        width: 16rem;
+        height: 16rem;
+        border-radius: 50%;
+        background: $white;
+        box-shadow: $main-shadow;
+        @include flex;
+        flex-direction: column;
+        position: absolute;
+        @include breakpoint($mini-desk) {
+            position: static;
+            margin: 0 1rem;
+        }
+        &:nth-child(2) {
+            top: 0;
+            left: 3rem;
+            animation: levitate 2.5s ease-in-out infinite alternate;
+        }
+        &:nth-child(3) {
+            top: 16rem;
+            left: 18rem;
+            animation: levitate 2.7s ease-in-out infinite alternate;
+        }
+        &:nth-child(4) {
+            top: 8rem;
+            left: 38rem;
+            animation: levitate 3s ease-in-out infinite alternate;
+        }
+        &:nth-child(5) {
+            top: 16rem;
+            left: 58rem;
+            animation: levitate 2.8s ease-in-out infinite alternate;
+            @include breakpoint(608px) {
+                display: none;
+            }
+        }
+    }
+    &-number {
+        display: block;
+        font-size: 5rem;
+        color: $primary;
+        margin: 3rem 0;
     }
 }

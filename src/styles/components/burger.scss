@@ -1,0 +1,14 @@
+.burger {
+    width: 2rem;
+    height: 2rem;
+    background: $primary;
+    display: none;
+    position: fixed;
+    top: 2.5rem;
+    right: 0%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+    @include breakpoint($tablet) {
+        display: block;
+    }
+}

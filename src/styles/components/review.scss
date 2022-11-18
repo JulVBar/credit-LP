@@ -3,4 +3,136 @@
     &-inner {
         width: 100%;
     }
+    &-title {
+        font-size: 3.5rem;
+        line-height: 4rem;
+        color: $white;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: 4rem;
+        @include breakpoint($mini-tablet) {
+            margin-bottom: 1.5rem;
+        }
+    }
+    &-swiper {
+        padding-bottom: 2rem;
+        position: relative;
+        &-wrapper {
+            width: 1400px;
+            padding: 1.2rem 0;
+        }
+        &-slide {
+            width: 760px !important;
+            height: 250px !important;
+            box-sizing: border-box;
+            background: #4178efe0;
+            box-shadow: $main-shadow;
+            border-radius: 1.2rem;
+            @include breakpoint($mini-tablet) {
+                width: 560px !important;
+                height: 300px !important;
+            }
+            @include breakpoint($mini-tablet) {
+                width: 370px !important;
+                height: 350px !important;
+            }
+            &-container {
+                width: 100%;
+                height: 100%;
+                padding: 1.5rem;
+                @include flex;
+                position: relative;
+                @include breakpoint($mini-tablet) {
+                    flex-direction: column;
+                    padding: 1rem;
+                }
+            }
+            &-photo {
+                width: 10rem;
+                height: 10rem;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-right: 1.5rem;
+                @include breakpoint($mini-tablet) {
+                    width: 5rem;
+                    height: 5rem;
+                    margin: 0;
+                    margin-bottom: 0.5rem;
+                }
+            }
+            &-content {
+                width: 70%;
+                height: 100%;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                @include breakpoint($mini-tablet) {
+                    width: 100%;
+                }
+                h4 {
+                    color: $white;
+                }
+                p {
+                    color: #ffffffcf;
+                }
+            }
+            &-raiting {
+                position: absolute;
+                top: 0;
+                right: 0;
+                @include flex;
+                li {
+                    &:not(:last-child) {
+                        margin-right: 0.3rem;
+                    }
+                }
+                svg {
+                    fill: $white;
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+        &-button-next,
+        &-button-prev {
+            position: absolute;
+            top: 50%;
+            z-index: 4;
+            transform: translateY(-50%);
+            width: 2.5rem;
+            height: 2.5rem;
+            background: $white;
+            box-shadow: $main-shadow;
+            cursor: pointer;
+            border-radius: 50%;
+            svg {
+                fill: $primary;
+                width: 1rem;
+                height: 1rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+            &.swiper-button-disabled svg {
+                fill: $grey;
+            }
+            @include breakpoint(1700px) {
+                display: none;
+            }
+        }
+        &-button-next {
+            right: 28%;
+            svg {
+                transform: translate(-50%, -50%) rotate(90deg);
+            }
+        }
+        &-button-prev {
+            left: 26.5%;
+            svg {
+                transform: translate(-50%, -50%) rotate(-90deg);
+            }
+        }
+    }
 }

@@ -1,6 +1,9 @@
 .order {
     background: $primary;
     height: 500px;
+    @include breakpoint($mini-tablet) {
+        height: 300px;
+    }
     &-inner {
         width: 100%;
         display: flex;
@@ -11,6 +14,9 @@
     }
     &-content {
         position: relative;
+        @include breakpoint($mobile) {
+            top: -6rem;
+        }
     }
     &-form {
         width: 44rem;
@@ -22,6 +28,12 @@
         z-index: 2;
         display: flex;
         flex-flow: column nowrap;
+        @include breakpoint($mini-tablet) {
+            transform: scale(0.8);
+        }
+        @include breakpoint($mobile) {
+            transform: scale(0.55);
+        }
         &-header {
             flex: 0 0 4.375rem;
             border-bottom: 1px solid $grey;
@@ -177,6 +189,19 @@
         display: block;
         text-align: center;
         margin-bottom: 4rem;
+        @include breakpoint($tablet) {
+            width: 100%;
+        }
+        @include breakpoint($mini-tablet) {
+            font-size: 2.5rem;
+            line-height: 3rem;
+            margin-bottom: 1rem;
+        }
+        @include breakpoint($mobile) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin-bottom: 1rem;
+        }
     }
 }
 
@@ -212,15 +237,15 @@ input.invalid {
     background-color: #ffdddd;
 }
 
-
-
-
 .owl {
     position: absolute;
     z-index: 1;
     top: 6rem;
     left: 0rem;
     animation: peep-out 3s ease infinite alternate;
+    @include breakpoint($tablet) {
+        display: none;
+    }
     &-left-eye,
     &-right-eye {
         width: 10px;
@@ -240,8 +265,6 @@ input.invalid {
         left: 95px;
     }
 }
-
-
 
 @keyframes peep-out {
     0% {
