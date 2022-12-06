@@ -11,6 +11,9 @@
         align-items: center;
         position: relative;
         top: -7rem;
+        @include breakpoint($mobile) {
+            height: 300px;
+        }
     }
     &-content {
         position: relative;

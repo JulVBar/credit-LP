@@ -132,6 +132,27 @@ $general-delay: 2.5s;
     animation-delay: calc($preloader-delay + $delay);
 }
 
+@keyframes circle-pump {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    70% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@mixin animation-circle-pump ($duration, $delay) {
+    opacity: 0;
+    animation: circle-pump $duration ease-in-out forwards;
+    animation-delay: $delay;
+}
+
 @keyframes blur-out {
     from {
         filter: blur(4px);

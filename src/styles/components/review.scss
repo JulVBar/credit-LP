@@ -4,7 +4,7 @@
         width: 100%;
     }
     &-title {
-        font-size: 3.5rem;
+        @include adaptiv-font(3.4, 2);
         line-height: 4rem;
         color: $white;
         width: 100%;

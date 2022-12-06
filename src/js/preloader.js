@@ -9,7 +9,7 @@ function preloader() {
             if (preloader && !preloader.classList.contains('done')) {
                 preloader.classList.add('done');
                 document.body.style.overflow = '';
-                document.querySelector('.hero').classList.add('start-animation');
+                // document.querySelector('.hero').classList.add('start-animation');
                 document.querySelector('.algorithm').classList.add('start-animation');
             }
 

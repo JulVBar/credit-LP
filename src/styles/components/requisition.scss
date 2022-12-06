@@ -3,6 +3,9 @@
     @include breakpoint($tablet) {
         height: 900px;
     }
+    @include breakpoint(400px) {
+        height: 1000px;
+    }
     &-inner {
         width: 100%;
         display: flex;
@@ -22,11 +25,18 @@
             padding: 0 2rem;
             text-align: center;
         }
+        @include breakpoint($mini-tablet) {
+            padding: 0 1rem;
+        }
     }
     &-title {
         @include adaptiv-font(3, 2);
         line-height: 4rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+        @include breakpoint($mini-tablet) {
+            margin-bottom: 1rem;
+            line-height: 2rem;
+        }
     }
     &-text {
         margin-bottom: 3.5rem;
@@ -81,6 +91,9 @@
             &:nth-child(4) {
                 display: none;
             }
+        }
+        @include breakpoint(400px) {
+            margin: 1.5rem 0;
         }
     }
     &-photo {

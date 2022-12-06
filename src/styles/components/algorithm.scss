@@ -2,16 +2,9 @@
     background: $primary;
     height: 800px;
     position: relative;
-    //start-animation
-    opacity: 0;
-    transform: translateY(200%);
     transition: all 1s linear;
     @include breakpoint($mini-tablet) {
         height: 500px;
-    }
-    &.start-animation {
-        opacity: 1;
-        transform: translateY(0%);
     }
     &-inner {
         width: 100%;
@@ -54,30 +47,6 @@
         img {
             width: 80%;
             height: 80%;
-        }
-        &-application {
-            // animation: circle-pump 0.8s linear forwards;
-            transform: scale(0);
-            animation-duration: 0.5s;
-            animation-fill-mode: forwards;
-            animation-timing-function: linear;
-            animation-delay: 0s;
-        }
-        &-choose {
-            // animation: circle-pump 0.8s linear forwards;
-            transform: scale(0);
-            animation-duration: 0.5s;
-            animation-fill-mode: forwards;
-            animation-timing-function: linear;
-            animation-delay: 1.4s;
-        }
-        &-money {
-            // animation: circle-pump 0.8s linear forwards;
-            transform: scale(0);
-            animation-duration: 0.5s;
-            animation-fill-mode: forwards;
-            animation-timing-function: linear;
-            animation-delay: 3s;
         }
     }
     &-text {
@@ -140,22 +109,6 @@
     }
 }
 
-@keyframes circle-pump {
-    0% {
-        transform: scale(0);
-    }
-    70% {
-        transform: scale(1.2);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-// animation-duration: 0.8s;
-// animation-fill-mode: forwards;
-// animation-timing-function: linear;
-// animation-delay: 3.4s;
 
 /* Lines Animation */
 .line-up {
@@ -190,10 +143,9 @@
     stroke-dasharray: 230;
     stroke-dashoffset: 230;
     // animation: line-dash  0.7s linear forwards;
-    animation-duration: 0.7s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
-    animation-delay: 0.6s;
 }
 .line-down-mask {
     fill: none;
@@ -202,10 +154,10 @@
     stroke-dasharray: 400;
     stroke-dashoffset: 400;
     // animation: line-dash 1.2s linear forwards; 
-    animation-duration: 1s;
+    animation-duration: 0.7s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 @keyframes line-dash {
     to {
@@ -217,8 +169,4 @@
 
 .animation-line-dash-start {
     animation-name: line-dash;
-}
-
-.animation-circle-pump-start {
-    animation-name: circle-pump;
 }

@@ -19,7 +19,7 @@
         }
     }
     &-title {
-        font-size: 3.5rem;
+        @include adaptiv-font(3.4, 2);
         line-height: 4rem;
         color: $black;
         width: 45%;
@@ -37,6 +37,9 @@
         }
         @include breakpoint($mini-tablet) {
             font-size: 2rem;
+        }
+        @include breakpoint($mobile) {
+            line-height: 2.5rem;
         }
     }
     &-circle {
@@ -83,3 +86,4 @@
         margin: 3rem 0;
     }
 }
+

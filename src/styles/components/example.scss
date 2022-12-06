@@ -46,16 +46,6 @@
                     object-fit: contain;
                 }
             }
-            &-title {
-                h3 {
-                    font-size: 1.6rem;
-                    margin-bottom: 1rem;
-                    line-height: 2rem;
-                }
-                p {
-                    font-size: 1.1rem;
-                }
-            }
             &-footer {
                 text-align: center;
             }
@@ -117,13 +107,18 @@
         width: 400px;
         margin-left: 6rem;
         margin-top: 1rem;
+        padding: 0.5rem;
+        p {
+            font-size: 1.1rem;
+        }
         @include breakpoint(1500px) {
             width: 100%;
             text-align: center;
             margin: 0;
         }
+        @include breakpoint($mobile) {
+            line-height: 2.5rem;
+        }
     }
 }
-
-
 
