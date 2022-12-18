@@ -1,14 +1,46 @@
 .burger {
-    width: 2rem;
-    height: 2rem;
-    background: $primary;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
     display: none;
-    position: fixed;
-    top: 2.5rem;
-    right: 0%;
-    transform: translate(-50%, -50%);
-    z-index: 6;
-    @include breakpoint($tablet) {
+    z-index: 10000;
+    @include breakpoint($mini-desk) {
         display: block;
     }
 }
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+}
+.hamRotate.active {
+    transform: rotate(45deg);
+}
+
+.line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: $primary;
+    stroke-width:5.5;
+    stroke-linecap:round;
+}
+.ham1 .top {
+    stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+    stroke-dasharray: 40 180;
+}
+.ham1.active .top {
+    stroke-dashoffset: -98px;
+}
+.ham1.active .bottom {
+    stroke-dashoffset: -138px;
+}
+

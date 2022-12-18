@@ -6,6 +6,8 @@ import caseSwitch from './js/caseSwitch';
 import swiper from './js/swiper';
 import orderForm from './js/orderForm';
 import orderFormControls from './js/orderFormControls';
+import burger from './js/burger';
+import btnToTop from './js/btnToTop';
 
 window.addEventListener('DOMContentLoaded', function() {
     preloader();
@@ -14,6 +16,8 @@ window.addEventListener('DOMContentLoaded', function() {
     swiper();
     orderForm();
     orderFormControls();
+    burger();
+    btnToTop();
 });
 
 // load all images
